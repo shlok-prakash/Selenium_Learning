@@ -1,0 +1,35 @@
+# Ignore build directories
+target/
+build/
+
+# Ensure src folder is included
+!src/
+!src/**
+
+# Ignore IDE-specific files
+### IntelliJ IDEA ###
+.idea/
+*.iml
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+
+### NetBeans ###
+nbproject/
+build/
+
+### VS Code ###
+.vscode/
+
+# OS-specific files
+.DS_Store
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+
+# Other unnecessary files
+*.bak
+*.swp
