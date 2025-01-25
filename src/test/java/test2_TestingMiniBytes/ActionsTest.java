@@ -1,6 +1,5 @@
 package test2_TestingMiniBytes;
 
-
 import constants.StringConstants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -13,9 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class ActionsClassTest {
+public class ActionsTest {
     public static void main(String[] args) {
-
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -36,7 +34,5 @@ public class ActionsClassTest {
         actions.click(addEntitlements).build().perform();
 
         driver.quit();
-
-        
     }
 }
