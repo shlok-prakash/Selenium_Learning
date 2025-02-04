@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Cat extends Animal {
+public class Cat extends DomesticAnimal {
 
     @Override
     public void sleep(){

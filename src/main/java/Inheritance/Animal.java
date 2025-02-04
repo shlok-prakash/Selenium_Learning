@@ -3,8 +3,10 @@ package Inheritance;
 public abstract class Animal {
     public int numbersOfEars=2;
 
-    public void eat(){
-        System.out.println("Eating");
+    public abstract boolean isDomestic();
+
+    public final void eat(){
+        System.out.println("Eating");//all the child
     }
 
     public void run(){

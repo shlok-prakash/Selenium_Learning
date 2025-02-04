@@ -3,6 +3,7 @@ package test2_TestingMiniBytes;
 import Inheritance.Animal;
 import Inheritance.Cat;
 import Inheritance.Dogs;
+import Inheritance.DomesticAnimal;
 
 public class InheritanceTest {
     public static void main(String[] args) {
@@ -42,7 +43,7 @@ public class InheritanceTest {
             //method overriding --> over ride the method present in parent class and provide its own implementation --- >>> Dynamic Polymorphism
             //method overloading --> same method name with different number of parameter  ---->>> static polymorphism
             //
-
+ /*
         Dogs dog = new Dogs();
         dog.eat();
         dog.sleep();
@@ -52,6 +53,19 @@ public class InheritanceTest {
         dog2.sleep();
 
         ((Dogs)dog2).bark(); //downcasting
+*/
+        Dogs dog = new Dogs();
+        dog.isDomestic();
+
+        DomesticAnimal dog1 = new Dogs();
+        dog1.isDomestic();
+        ((Dogs) dog1).bark();
+
+        Animal dog2 = new Dogs();
+        dog2.isDomestic();
+        ((Dogs) dog2).bark();
+
+
 
     }
 }

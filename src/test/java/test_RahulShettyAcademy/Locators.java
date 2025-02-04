@@ -39,14 +39,14 @@ public class Locators {
 
         driver.findElement(By.xpath("//form/input[3]")).sendKeys("78764654310");
 
-        //Reset Button step to be continued*************************************************8
+        driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
 
-        Thread.sleep(5000);
+        System.out.println((driver.findElement(By.cssSelector("form p")).getText()));
 
-
+        
 
 //        Thread.sleep(5000);
-        driver.close();
+//        driver.quit();
 
 
 

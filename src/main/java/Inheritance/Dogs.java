@@ -1,11 +1,6 @@
 package Inheritance;
 
-public class Dogs extends Animal { //child for animal parent class
-
-    @Override
-    public void eat(){
-        System.out.println("I am a dog and I eat pedigree");
-    }
+public class Dogs extends DomesticAnimal { //child for animal parent class
 
     @Override
     public void sleep(){
