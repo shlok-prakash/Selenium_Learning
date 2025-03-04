@@ -6,6 +6,9 @@ public class StringConstants {
     public static String orangeHrmLoginUrl = ("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     public static String JqueryUrl = ("https://jqueryui.com/");
     public static String fileUploadUrl = ("https://demo.automationtesting.in/FileUpload.html");
+    public static String AutomationPracticeRahulShetty = ("https://rahulshettyacademy.com/AutomationPractice/");
+    public static String flightBookingDropDowns = ("https://rahulshettyacademy.com/dropdownsPractise/");
+
 
 
     public static String xPath(String value, String Startergy){

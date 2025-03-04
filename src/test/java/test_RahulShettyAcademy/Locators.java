@@ -41,15 +41,39 @@ public class Locators {
 
         driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
 
-        System.out.println((driver.findElement(By.cssSelector("form p")).getText()));
-
-        
-
-//        Thread.sleep(5000);
-//        driver.quit();
 
 
+        System.out.println(driver.findElement(By.cssSelector("form p")).getText());
+        String password = passWordExtract(driver.findElement(By.cssSelector("form p")).getText());
+        System.out.println(password);
 
+
+        driver.findElement(By.xpath("//div[@class = 'forgot-pwd-btn-conainer']/button[1]")).click();
+
+        Thread.sleep(1000);
+
+        driver.findElement(By.cssSelector("input#inputUsername")).sendKeys("John");
+
+        driver.findElement(By.cssSelector("input[type*='pass']")).sendKeys(password);
+
+        driver.findElement(By.id("chkboxOne")).click();
+
+        driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
+
+        driver.close();
+    }
+    public static String passWordExtract(String password){
+
+        String[] passwordArray  = password.split("'");
+        return passwordArray[1].split("'")[0];
+
+        /*
+        0th index - Please use temporary password
+        1st index - rahulshettyacademy' to Login.
+
+        0th index - rahulshettyacademy
+        1st index - to Login.
+         */
 
     }
 }
