@@ -1,9 +1,11 @@
 package test_RahulShettyAcademy;
 
 import constants.StringConstants;
+import java.util.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class UpdatedDropDown {
@@ -14,6 +16,24 @@ public class UpdatedDropDown {
         driver.manage().window().maximize();
 
         driver.get(StringConstants.flightBookingDropDowns);
+
+        System.out.println(driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).isSelected());
+
+        driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).click();
+
+        System.out.println(driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).isSelected());
+
+        //count the Number Of Checkboxes
+
+        System.out.println(driver.findElements(By.xpath("//input[@type = 'checkbox']")).size());
+
+        List<WebElement> options = driver.findElements(By.xpath("//input[@type = 'checkbox']//following-sibling::*"));
+
+        for(WebElement option : options){
+            System.out.println(option.getText());
+        }
+
+
 
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
 
@@ -34,7 +54,7 @@ public class UpdatedDropDown {
 
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
 
-        driver.close();
+//        driver.quit();
 
 
 
