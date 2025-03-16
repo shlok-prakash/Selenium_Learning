@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class UpdatedDropDown {
     public static void main(String[] args) throws InterruptedException {
@@ -17,17 +18,33 @@ public class UpdatedDropDown {
 
         driver.get(StringConstants.flightBookingDropDowns);
 
-        System.out.println(driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).isSelected());
+            System.out.println(driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).isSelected());
+
+        Assert.assertFalse(driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).isSelected());
 
         driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).click();
 
         System.out.println(driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).isSelected());
+
+        Assert.assertTrue(driver.findElement(By.xpath("//input[contains(@id,'IndArm')]")).isSelected());
 
         //count the Number Of Checkboxes
 
         System.out.println(driver.findElements(By.xpath("//input[@type = 'checkbox']")).size());
 
         List<WebElement> options = driver.findElements(By.xpath("//input[@type = 'checkbox']//following-sibling::*"));
+
+        System.out.println(driver.findElement(By.id("Div1")).getDomAttribute("style"));
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        System.out.println(driver.findElement(By.id("Div1")).getDomAttribute("style"));
+        System.out.println(driver.findElement(By.id("Div1")).getDomProperty("style"));
+        if(driver.findElement(By.id("Div1")).getDomAttribute("style").contains("1")){
+            System.out.println("is Enabled");
+            Assert.assertTrue(true);
+        }else{
+            Assert.assertTrue(false);
+        }
+
 
         for(WebElement option : options){
             System.out.println(option.getText());
@@ -54,11 +71,9 @@ public class UpdatedDropDown {
 
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
 
-//        driver.quit();
+        Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult, 2 Child" );
 
-
-
-
+        driver.quit();
 
     }
 }

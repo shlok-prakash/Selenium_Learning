@@ -8,6 +8,8 @@ public class StringConstants {
     public static String fileUploadUrl = ("https://demo.automationtesting.in/FileUpload.html");
     public static String AutomationPracticeRahulShetty = ("https://rahulshettyacademy.com/AutomationPractice/");
     public static String flightBookingDropDowns = ("https://rahulshettyacademy.com/dropdownsPractise/");
+    public static String PractisePageRahulShetty = ("https://rahulshettyacademy.com/AutomationPractice/");
+    public static String PractiseAngularPageRahulShetty = ("https://rahulshettyacademy.com/angularpractice/");
 
 
 
