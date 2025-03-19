@@ -10,6 +10,8 @@ public class StringConstants {
     public static String flightBookingDropDowns = ("https://rahulshettyacademy.com/dropdownsPractise/");
     public static String PractisePageRahulShetty = ("https://rahulshettyacademy.com/AutomationPractice/");
     public static String PractiseAngularPageRahulShetty = ("https://rahulshettyacademy.com/angularpractice/");
+    public static String greenKartRahulShetty = ("https://rahulshettyacademy.com/seleniumPractise/#/");
+    public static String loginPracticeRahulShetty = ("https://rahulshettyacademy.com/loginpagePractise/");
 
 
 
