@@ -12,6 +12,11 @@ public class StringConstants {
     public static String PractiseAngularPageRahulShetty = ("https://rahulshettyacademy.com/angularpractice/");
     public static String greenKartRahulShetty = ("https://rahulshettyacademy.com/seleniumPractise/#/");
     public static String loginPracticeRahulShetty = ("https://rahulshettyacademy.com/loginpagePractise/");
+    public static String herokuappUrl = ("https://the-internet.herokuapp.com/");
+    public static String Amazon = ("https://www.amazon.in/");
+
+
+
 
 
 
